@@ -53,4 +53,35 @@ void vector_example(){
 
     cout<<"Printing Begin: "<< *(printing) <<" "<<endl;
     cout<<"Printing End: "<< *(printing1) <<" "<<endl;
+    cout<<"what is Number of Zero: "<<number[0]<<" "<<"What is Number at: "<<number.at(0)<<endl;
+    cout<<"Back of Number: "<<number.back()<<endl<<endl;
+
+    // Looping or printing the Vector
+    cout<<"Looping Vector Normal way: "<<endl;
+    for(vector<int>::iterator printing_number = number.begin(); printing_number != number.end(); printing_number++)
+    {
+        cout<<*(printing_number)<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    //auto way
+    cout<<"Looping Vector Auto way: "<<endl;
+    for(auto numner_auto = number.begin() ; numner_auto!=number.end(); numner_auto++)
+    {
+        cout<<*(numner_auto)<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    // Using for each
+    cout<<"Looping Vector using For Each Loop: "<<endl;
+    for(auto number_foreach : number)
+    {
+        cout<<number_foreach<<" ";
+    }    
+
+    cout<<endl<<endl;
+
+
 }
