@@ -1,14 +1,18 @@
 #include<iostream> //for input ouptut
 #include<utility> //for pair
+#include<vector> //for vector
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
 void pair_example();
+void vector_example();
 
 
 int main(){
-    cout<<"It is working"<<endl;
-    pair_example();
+    // cout<<"It is working"<<endl;
+    // pair_example();
+    cout<<endl;
+    vector_example();
     return 0;
 }
 
@@ -20,7 +24,33 @@ void pair_example(){
    cout<<"Data First Element: "<<data.first<<endl<<"Data Second's First Element: "<<data.second.first<<endl<<
    "Data Second's Second Element: "<<data.second.second<<endl;
 
-   pair<int , string> arr[] ={{1,"Dheeraj"} , {2, "Deepanshi"}};
+   pair<int , string> arr[] ={{1,": Dheeraj"} , {2, ": Deepanshi"} , {3,": Kaushik"}};
    cout<<"First's First and Second: "<<arr[0].first<<" "<<arr[0].second<<endl<<
-   "Second's First and Second: "<<arr[1].first<<" "<<arr[1].second<<endl;
+   "Second's First and Second: "<<arr[1].first<<" "<<arr[1].second<<endl<<
+   "Third's First and Second: "<<arr[2].first<<" "<<arr[2].second<<endl;
+
+}
+
+void vector_example(){
+
+    vector<int> number;
+    number.push_back(14);
+    number.push_back(223);
+    number.push_back(13);
+    number.emplace_back(36);
+    number.push_back(131);
+
+    cout<<number[0]<<endl;
+    cout<<number[1]<<endl;
+    cout<<number[2]<<endl;
+    cout<<number[3]<<endl;
+    cout<<number[4]<<endl;
+
+    vector<int>::iterator printing = number.begin();
+    vector<int>::iterator printing1 = number.end();
+
+    printing1--;
+
+    cout<<"Printing Begin: "<< *(printing) <<" "<<endl;
+    cout<<"Printing End: "<< *(printing1) <<" "<<endl;
 }
