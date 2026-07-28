@@ -8,6 +8,8 @@
 #include<set> //for set
 #include <unordered_set> // for unorderd set
 #include<map>
+#include<unordered_map> //for unordered map
+
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
@@ -22,6 +24,8 @@ void set_example();
 void multi_set_example();
 void unorder_set_example();
 void map_example();
+void multi_map_example();
+void unordered_map();
 
 int main(){
     cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
@@ -36,6 +40,9 @@ int main(){
     // multi_set_example();
     // unorder_set_example();
     // map_example();
+    // multi_map_example();
+    // void unordered_map();
+
     return 0;
 }
 
@@ -374,7 +381,16 @@ void map_example(){
 
 }
 
+void multi_map_example(){
+    // similar to map but here we can store store duplicate key
 
+}
+
+void unordered_map(){
+ 
+    // similar to multi map but it does not store value in soryed order
+    
+}
 
 
 
