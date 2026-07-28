@@ -2,18 +2,24 @@
 #include<utility> //for pair
 #include<vector> //for vector
 #include<list> //for list
+#include<deque> //for deque
+#include<stack> //for stack
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
 void pair_example();
 void vector_example();
 void list_example();
+void deque_example();
+void stack_example();
 
 int main(){
-    cout<<"Learning Standard Tamplate Library(STL)"<<endl;
+    cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
     // pair_example();
     // vector_example();
-    list_example();
+    // list_example();
+    // deque_example();
+    stack_example();
     return 0;
 }
 
@@ -216,5 +222,45 @@ void list_example(){
         cout<<list_number<<" ";
     }
     cout<<endl;
+    
+}
+
+void deque_example(){
+
+
+    deque<int> number;
+
+    number.push_back(1);
+    number.emplace_back(2);
+    number.push_front(4);
+    number.emplace_front(3);
+
+    for(auto number_deque : number)
+    {
+        cout<<number_deque<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    number.pop_back();
+    number.pop_front();
+
+    for(auto number_del : number)
+    {
+        cout<<number_del<<" ";
+    }
+
+    cout<<endl<<endl;
+
+    cout<<"Back: "<<number.back()<<endl<<endl;
+    cout<<"Front: "<<number.front();
+
+   
+
+    cout<<endl<<endl;
+
+}
+
+void stack_example(){
     
 }
