@@ -262,5 +262,14 @@ void deque_example(){
 }
 
 void stack_example(){
+    stack<int> st;
+
+    st.push(1);
+    st.push(3);
+    st.push(4);
+    st.emplace(2);
+
+    cout<<"Top: "<<st.top()<<endl<<endl;
     
+   
 }
