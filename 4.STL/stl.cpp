@@ -4,6 +4,7 @@
 #include<list> //for list
 #include<deque> //for deque
 #include<stack> //for stack
+#include<queue> //for queue
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
@@ -12,6 +13,7 @@ void vector_example();
 void list_example();
 void deque_example();
 void stack_example();
+void queue_example();
 
 int main(){
     cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
@@ -19,7 +21,8 @@ int main(){
     // vector_example();
     // list_example();
     // deque_example();
-    stack_example();
+    // stack_example();
+    queue_example();
     return 0;
 }
 
@@ -262,6 +265,7 @@ void deque_example(){
 }
 
 void stack_example(){
+
     stack<int> st;
 
     st.push(1);
@@ -273,3 +277,29 @@ void stack_example(){
     
    
 }
+
+void queue_example(){
+
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.emplace(3);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
