@@ -6,7 +6,8 @@
 #include<stack> //for stack
 #include<queue> //for queue
 #include<set> //for set
-#include<unorderdset>
+#include <unordered_set> // for unorderd set
+#include<map>
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
@@ -20,6 +21,7 @@ void priority_queue_example();
 void set_example();
 void multi_set_example();
 void unorder_set_example();
+void map_example();
 
 int main(){
     cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
@@ -32,7 +34,8 @@ int main(){
     // priority_queue_example();
     // set_example();
     // multi_set_example();
-    unorder_set_example();
+    // unorder_set_example();
+    // map_example();
     return 0;
 }
 
@@ -342,10 +345,52 @@ void multi_set_example(){
 }
 
 void unorder_set_example(){
-    unordered set<int> st;
+    unordered_set<int> st;
 
     // lower and uppper bound does not work here
 }
+
+void map_example(){
+
+    // map store data in key value pair the key can be any data type like int , pair
+    // map store unique key in the sorted order
+
+    map<int , int> mpp;
+    map<int , pair<int ,int>> mapp1;
+    map<pair<int , int> , int> mapp2;
+
+    mpp[1] = 2; // for the key 1 can you store 2
+    mpp.emplace(3, 5); // 3 is the key and 5 is the value 
+    mpp.insert({2,4}); // 2 is the key and 4 is the value
+
+    mapp2[{2,3}] = 10; // here pair{2,3} is the key and 10 is the value
+
+    for(auto it : mpp)
+    {
+        cout<<it.first<<" "<<it.second;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
