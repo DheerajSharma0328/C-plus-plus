@@ -5,6 +5,7 @@
 #include<deque> //for deque
 #include<stack> //for stack
 #include<queue> //for queue
+#include<set> //for set
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
@@ -14,6 +15,8 @@ void list_example();
 void deque_example();
 void stack_example();
 void queue_example();
+void priority_queue_example();
+void set_example();
 
 int main(){
     cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
@@ -22,7 +25,9 @@ int main(){
     // list_example();
     // deque_example();
     // stack_example();
-    queue_example();
+    // queue_example();
+    // priority_queue_example();
+    set_example();
     return 0;
 }
 
@@ -287,9 +292,37 @@ void queue_example(){
 
 }
 
+void priority_queue_example(){
 
+    priority_queue<int> pq;
 
+    pq.push(5);
+    pq.push(6);
+    pq.push(7);
+    pq.push(8);
 
+    cout<<"TOP: "<<pq.top();
+
+}
+
+void set_example(){
+
+    set<int> st;
+
+    st.insert(1);
+    st.insert(2);
+    st.insert(3);
+    st.insert(4);
+    st.insert(5);
+    st.emplace(7);
+
+    auto it = st.find(3);
+    auto it = st.find(9);
+    auto it = st.upper_bound(2);
+    auto it = st.lower_bound(3);
+    
+
+}
 
 
 
