@@ -83,5 +83,36 @@ void vector_example(){
 
     cout<<endl<<endl;
 
+    // Deletion in vector
+    cout<<"ddeletion in Vector: ";
+    number.erase(number.end()-2);
+    for(auto number_deletion : number)
+    {
+        cout<<number_deletion<<" ";
+    }
+
+    number.push_back(54);
+    number.push_back(21);
+    number.push_back(98);
+    number.push_back(78);
+
+    for( auto number_add : number)
+    {
+        cout<<number_add<<" ";
+    }
+
+    //Deleting Multiple items in Vector
+    // Here sating index is included but the ending index is not including so if we want ro delete item from 
+    // index 0 to index 3 then to delete these index we have to give oen more index address
+    // sp delete element from index 0 to 3 then we have to pass hte index from 0 t0 4
+    cout<<endl<<endl;
+    cout<<"Deleting Multiple items in Vector: ";
+
+    number.erase(number.begin()+1 , number.begin()+3);
+
+    for(auto number_multi_delete : number)
+    {
+        cout<<number_multi_delete<<" ";
+    }
 
 }
