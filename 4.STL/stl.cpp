@@ -6,6 +6,7 @@
 #include<stack> //for stack
 #include<queue> //for queue
 #include<set> //for set
+#include<unorderdset>
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
@@ -17,6 +18,8 @@ void stack_example();
 void queue_example();
 void priority_queue_example();
 void set_example();
+void multi_set_example();
+void unorder_set_example();
 
 int main(){
     cout<<"Learning Standard Tamplate Library(STL)"<<endl<<endl<<endl;
@@ -27,7 +30,9 @@ int main(){
     // stack_example();
     // queue_example();
     // priority_queue_example();
-    set_example();
+    // set_example();
+    // multi_set_example();
+    unorder_set_example();
     return 0;
 }
 
@@ -316,15 +321,31 @@ void set_example(){
     st.insert(5);
     st.emplace(7);
 
-    auto it = st.find(3);
-    auto it = st.find(9);
-    auto it = st.upper_bound(2);
-    auto it = st.lower_bound(3);
+    auto it1 = st.find(3);
+    auto it2 = st.find(9);
+    auto it3 = st.upper_bound(2);
+    auto it4 = st.lower_bound(3);
     
 
 }
 
+void multi_set_example(){
 
+    multiset<int> must;
+
+    must.insert(1);
+    must.insert(1);
+    must.insert(1);
+    must.insert(1);
+    must.insert(1);
+
+}
+
+void unorder_set_example(){
+    unordered set<int> st;
+
+    // lower and uppper bound does not work here
+}
 
 
 
