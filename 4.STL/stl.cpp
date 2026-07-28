@@ -115,4 +115,93 @@ void vector_example(){
         cout<<number_multi_delete<<" ";
     }
 
+    
+    // Insertion in Vector
+    cout<<endl<<endl<<"Insertion in Vector: ";
+
+    number.insert(number.end() , 1);
+
+    for(auto number_insert : number)
+    {
+        cout<<number_insert<<" ";
+    }
+
+     cout<<endl<<endl<<"Multi-Insertion in Vector: ";
+     number.insert(number.end(), {2,3,4,5});
+     number.insert(number.begin() , {1,2,3,4,5});
+
+     for(auto number_multi_insert : number)
+     {
+        cout<<number_multi_insert<<" ";
+     }
+
+      cout<<endl<<endl;
+
+    //   How to insert one vector inside another
+    vector<int> copy = {50 , 50};
+
+    //Now insertng this vector inside the another vector
+
+    number.insert(number.begin()+3 , copy.begin() , copy.end());
+
+    //Prinitng the old number Vector
+
+    for(auto number_vector_insert : number)
+    {
+        cout<<number_vector_insert<<" ";
+    }
+
+    // Size of vector
+    cout<<endl<<endl<<"Size of vector: "<<number.size()<<endl<<endl;
+
+    // Deleting the last element only using Pop
+    number.pop_back();
+
+    for(auto number_pop : number)
+    {
+        cout<<number_pop<<" ";
+    }
+
+    // Swaping the vector
+    cout<<endl<<endl<<"Swaping the vector: "<<endl<<endl;
+    vector<int> vector1 = {1,2,3,4,5,11};
+    vector<int> vector2 = {6,7,8,9,0};
+
+    // Swaping these two vector
+
+    vector1.swap(vector2);
+
+    // Printing Vector1 After Swapping
+    cout<<"Printing Vector1 After Swapping: ";
+    for(auto vector1_swap : vector1)
+    {
+        cout<<vector1_swap<<" ";
+    }
+    // Printing Vector2 After Swapping
+    cout<<endl<<endl<<"Printing Vector2 After Swapping: ";
+    for(auto vector2_swap : vector2)
+    {
+        cout<<vector2_swap<<" ";
+    }
+
+    // Deleting All Element of a vector1
+    cout<<endl<<endl<<"Size of Vector1: "<<vector1.size();
+    cout<<endl<<endl<<"Deleting All Element of a Vector1: ";
+    vector1.clear();
+    cout<<endl<<endl<<"Size of Vector1: "<<vector1.size()<<endl<<endl;
+
+    // Checking that a vector is empty of not
+    // If it is empty function return : true else : false
+
+    // Checking that vector1 is Empty or not
+    cout<<"Checking that vector1 is Empty or not: "<<vector1.empty()<<endl<<endl;
+    // Checking that vector2 is Empty or not
+    cout<<"Checking that vector2 is Empty or not: "<<vector2.empty()<<endl<<endl;
+
+
+
+
+
+
+
 }
