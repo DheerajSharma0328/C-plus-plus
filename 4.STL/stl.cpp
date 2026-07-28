@@ -1,18 +1,19 @@
 #include<iostream> //for input ouptut
 #include<utility> //for pair
 #include<vector> //for vector
+#include<list> //for list
 // #include<bits/stdc++.h> // for all the library provided by C++
 using namespace std;
 
 void pair_example();
 void vector_example();
-
+void list_example();
 
 int main(){
-    // cout<<"It is working"<<endl;
+    cout<<"Learning Standard Tamplate Library(STL)"<<endl;
     // pair_example();
-    cout<<endl;
-    vector_example();
+    // vector_example();
+    list_example();
     return 0;
 }
 
@@ -186,7 +187,7 @@ void vector_example(){
 
     // Deleting All Element of a vector1
     cout<<endl<<endl<<"Size of Vector1: "<<vector1.size();
-    cout<<endl<<endl<<"Deleting All Element of a Vector1: ";
+    cout<<endl<<endl<<"Deleting All Element of a Vector1: "; 
     vector1.clear();
     cout<<endl<<endl<<"Size of Vector1: "<<vector1.size()<<endl<<endl;
 
@@ -198,10 +199,22 @@ void vector_example(){
     // Checking that vector2 is Empty or not
     cout<<"Checking that vector2 is Empty or not: "<<vector2.empty()<<endl<<endl;
 
+}
 
+void list_example(){
 
+    list<int> number;
 
+    number.push_back(2);
+    number.emplace_back(4);
 
+    number.push_front(5);
+    number.emplace_front(4);
 
-
+    for(auto list_number : number)
+    {
+        cout<<list_number<<" ";
+    }
+    cout<<endl;
+    
 }
