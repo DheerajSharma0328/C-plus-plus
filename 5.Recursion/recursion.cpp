@@ -18,9 +18,7 @@ void recursion(int a){
     {
         return;
     }
-    else
-    {
-        cout<<"Print: "<<a<<"Times"<<endl;
-    }
+
+    cout<<"Print: "<<a<<"Times"<<endl;
     recursion(a);
 }
