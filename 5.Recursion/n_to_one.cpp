@@ -24,6 +24,6 @@ void n_to_one(int number)
         return;
     }
 
-    number--;
-    n_to_one(number);
+    // number--;
+    n_to_one(number-1);
 }
